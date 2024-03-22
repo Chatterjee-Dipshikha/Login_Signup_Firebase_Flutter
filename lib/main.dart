@@ -1,3 +1,7 @@
+
+
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:video/View/insta_login_page.dart';
@@ -11,6 +15,7 @@ void main() async {
      options: DefaultFirebaseOptions.currentPlatform,
 );
   runApp(const MyApp());
+  log('Hello');
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Firebase auth',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         
@@ -28,6 +33,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: LoginCheck(),
+      //Hello
     );
   }
 }
